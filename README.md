@@ -1,3 +1,3 @@
 # Battleship
 
-Classic battleship game implemented as a web application
+Classic battleship game implemented in the browser
