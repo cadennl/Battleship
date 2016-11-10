@@ -1,0 +1,52 @@
+
+
+/*html
+{
+	height: 100%;
+	position: absolute;
+}*/
+
+body {
+  background-color: #b2e9e4;
+  min-height: 100%;
+  position: absolute;
+  min-width: 100%;
+}
+
+
+
+#map
+{
+	height: 100%;
+	width: 80%;
+	position: absolute;
+	left:0;
+	right: 0;
+	margin: 0 auto;
+}
+
+#map > div
+{
+	position:relative;
+	width: 2%;
+	height: 2%;
+	
+	float: left;
+	background-color: #D4D490;
+	margin: .5px;
+	border-radius: 2.3px;
+	box-shadow: 1px;
+	
+}
+
+#p1_cli_panel
+{
+position: absolute;
+left:0;
+}
+
+#p2_cli_panel
+{
+position: absolute;
+right: 0;
+}
