@@ -49,7 +49,7 @@ var SuperBattleship = function (custom_options) {
 		  size: 2}],
 	boardSize: 50,
 	missAge: 10,
-	turnLimit: 200,
+	turnLimit: 1000,
 	rotateMissLimit: 3,
 	rearViewDistance: 2
     }
@@ -224,6 +224,7 @@ var SuperBattleship = function (custom_options) {
 	}
 
 	turn_count++;
+	console.log(turn_count)
 
 	if (turn_count == options.turnLimit) {
 	    fireEvent(new GameOverEvent(SBConstants.DRAW));
@@ -247,18 +248,64 @@ var SuperBattleship = function (custom_options) {
     var moveShip = function(key, ship, distance) {
 	if (status == SBConstants.REGISTERING_PLAYERS ||
 	    status == SBConstants.FINISHED) {
+		//console.log("dick");
 	    return false;
 	}
 
 	// Is it this person's turn?
 	if ((key != p1_key) && (key != p2_key)) {
+		//console.log("dick");
 	    return false;
 	}
 	if ((key == p1_key) && status != SBConstants.PLAYER_ONE) {
+		//
 	    return false;
 	}
 	if ((key == p2_key) && status != SBConstants.PLAYER_TWO) {
-	    return false;
+		//When you spend hours trying to fix a bug only to realize its a built in option called "turnLimit"
+		//
+		// All around me are familiar faces
+		// Worn out places, worn out faces
+		// Bright and early for their daily races
+		// Going nowhere, going nowhere
+
+		// Their tears are filling up their glasses
+		// No expression, no expression
+		// Hide my head, I wanna drown my sorrow
+		// No tomorrow, no tomorrow
+
+		// And I find it kinda funny
+		// I find it kinda sad
+		// The dreams in which I'm dying
+		// Are the best I've ever had
+		// I find it hard to tell you
+		// I find it hard to take
+		// When people run in circles
+		// It's a very, very mad world, mad world
+
+		// Children waiting for the day they feel good
+		// Happy Birthday, Happy Birthday
+		// And I feel the way that every child should
+		// Sit and listen, sit and listen
+
+		// Went to school and I was very nervous
+		// No one knew me, no one knew me
+		// Hello teacher tell me what's my lesson
+		// Look right through me, look right through me
+
+		// And I find it kinda funny
+		// I find it kinda sad
+		// The dreams in which I'm dying
+		// Are the best I've ever had
+		// I find it hard to tell you
+		// I find it hard to take
+		// When people run in circles
+		// It's a very, very mad world, mad world
+
+		// Enlarging your world
+		// Mad world
+		return false;
+
 	}
 
 	// Is it this person's ship?
@@ -269,6 +316,7 @@ var SuperBattleship = function (custom_options) {
 
 	// Is the ship dead?
 	if (ship.getStatus() == SBConstants.DEAD) {
+		
 	    return false;
 	}
 	
@@ -307,6 +355,7 @@ var SuperBattleship = function (custom_options) {
 
 	var loc = that.queryLocation(key, sqr_x, sqr_y);
 	if (loc.type != "empty") {
+		//console.log("dick");
 	    return false;
 	}
 
@@ -314,7 +363,7 @@ var SuperBattleship = function (custom_options) {
 	new_pos_x = normX(new_pos_x);
 	new_pos_y = normY(new_pos_y);
 	ship.setShipLocation(game_key, new_pos_x, new_pos_y);
-
+    
 	// Switch turns
 	switchTurns();
 	return true;
@@ -400,6 +449,7 @@ var SuperBattleship = function (custom_options) {
 		}
 	    }
 	}
+
 	// Nothing preventing the rotation.
 	var new_dir = is_cw ?
 	    SBConstants.nextDirCW(pos.direction) :
@@ -626,7 +676,8 @@ var SuperBattleship = function (custom_options) {
 	    ((key == p1_key) && visibleToFleet(key, player_one_fleet, x, y)) ||
 	    ((key == p2_key) && visibleToFleet(key, player_two_fleet, x, y))) {
 	    return loc_info;
-	} else {
+	} 
+	else {
 	    return {type: "invisible"};
 	}
     };

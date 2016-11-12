@@ -33,10 +33,21 @@
 </head>
 <body>
 
+<div id = 'main-content'>
 <div id = 'map' ></div>
     
     
-   
+  
+<!--  <div id="map_panel">
+  <div id="map_view">
+    <div id="p1_view">P1 View</div>
+    <div id="p2_view">P2 View</div>
+  </div>
+  <div id="view_cntrl">
+    <button type="button" id="p1_view_btn">Player 1 View</button>
+    <button type="button" id="p2_view_btn">Player 2 View</button>
+  </div>
+</div>
 
 <div id="cli_panel">
   <div id="p1_cli_panel">
@@ -49,7 +60,27 @@
     <div><input id="p2_cli_input"></div>
     <div id="p2_cli_output"></div>
   </div>
+</div> -->
+<div class = 'cli_input'>
+<h3 id = 'snarky'> HAL 426</h3>
+<button type="button" class="btn btn-info fleetinfo">Fleet Info</button>
+
+
+<h1>Controls:<h1>
+<h5 id = 'friends'>Press any key to begin my friend<h5>
+<div class = 'comm-options'></div>
+<div class = 'ship-options'></div>
+<h5 class = 'actual-input'>To shoot just press a tile</h5>
+<div class = 'fleet-output'></div>
 </div>
+
+
+
+
+
+</div>
+
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   
@@ -57,11 +88,11 @@
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.svg.min.js"></script>
 <script src="SBConstants.js"></script>
 <script src="SuperBattleship.js"></script>
-<script src ='CLIPlayer.js'></script>
 <script src = 'View.js'></script>
+
+<!-- <script src = 'View.js'></script> -->
 
 </body>
 </html>

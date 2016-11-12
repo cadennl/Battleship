@@ -7,36 +7,74 @@
 }*/
 
 body {
-  background-color: #b2e9e4;
+  background-color: #fff;
   min-height: 100%;
   position: absolute;
   min-width: 100%;
 }
 
+#main-content
+{
+	display: flex;
+	/*height:100%;*/
+	min-width: 100%;
+	height: 900px;
+	flex-flow: row wrap;
+	position: absolute;
+	justify-content: space-around;
+}
 
+.actual-input
+{
+	display:none;
+}
 
+span
+{
+	font-size: 13px;
+}
 #map
 {
-	height: 100%;
-	width: 80%;
-	position: absolute;
-	left:0;
-	right: 0;
+	height: 900px;
+	width: 900px;
+	position: relative;
+	flex-wrap: wrap;
 	margin: 0 auto;
+	order: 2;
 }
 
 #map > div
 {
 	position:relative;
-	width: 2%;
-	height: 2%;
-	
+	width: 18px;
+	height: 18px;
 	float: left;
-	background-color: #D4D490;
-	margin: .5px;
+	margin: .01px;
 	border-radius: 2.3px;
 	box-shadow: 1px;
 	
+}
+.miss{
+	background-color: red;
+}
+
+.nolook
+{
+	background-color: #2a90cc;
+}
+
+.flag
+{
+
+}
+
+.active
+{
+	background-color: #6d7b87;
+}
+
+.white{
+	background-color: #ffc672;
 }
 
 #p1_cli_panel
@@ -49,4 +87,58 @@ left:0;
 {
 position: absolute;
 right: 0;
+}
+
+
+.fleetinfo
+{
+	background-color: #2a90cc;
+}
+
+.fleet-output
+{
+	margin-top: 20px;
+}
+
+.comm-options, .ship-options
+{
+	display: flex;
+	flex-flow: row wrap;
+	height: 100%;
+}
+
+
+.comm-options *, .ship-options *
+{
+	margin: 2px;
+	flex-wrap: wrap;
+}
+
+input.form-control + input
+{
+	display: none;
+}
+.cli_input 
+{
+	
+	flex-wrap: wrap;
+	margin: 0 auto;
+	order: 1;
+	/*width: 40%;*/
+}
+.cli_input *
+{
+  positon: relative;
+  
+}
+.cli_form_input
+{
+	margin-right: 25px;
+	width:20%;
+}
+
+#player_cli_input
+{
+
+	height: 20px;
 }
