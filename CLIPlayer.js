@@ -130,19 +130,9 @@ var CLIPlayer = function(game, cli_input, cli_output, map, is_player_one, locati
 // 		var x = parseInt(cmd_array[1]);
 // 		var y = parseInt(cmd_array[2]);
 // 		game.shootAt(key, x, y);
-	var keys = {};
-
-	$(document).keydown(function (e) {
-    keys[e.which] = true;
-    
-	});
-
-	$(document).keyup(function (e) {
-    delete keys[e.which];
-	});
-
-	}
  	    
+		
+
 
 	    } else if (cmd_array[0] == "fleetInfo") {
 		var fleet = game.getFleetByKey(key);

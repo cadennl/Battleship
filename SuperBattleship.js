@@ -224,7 +224,7 @@ var SuperBattleship = function (custom_options) {
 	}
 
 	turn_count++;
-	console.log(turn_count)
+	
 
 	if (turn_count == options.turnLimit) {
 	    fireEvent(new GameOverEvent(SBConstants.DRAW));

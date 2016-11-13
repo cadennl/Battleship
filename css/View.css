@@ -55,7 +55,7 @@ span
 	
 }
 .miss{
-	background-color: red;
+	background-color: #f4ec73;
 }
 
 .nolook
@@ -68,6 +68,10 @@ span
 
 }
 
+.hit
+{
+	background-color: #f45c42;
+}
 .active
 {
 	background-color: #6d7b87;
@@ -90,10 +94,11 @@ right: 0;
 }
 
 
-.fleetinfo
+.fleetinfo, .rotatecw, .rotateccw, .moveforward, .movebackward
 {
 	background-color: #2a90cc;
 }
+
 
 .fleet-output
 {
@@ -106,7 +111,30 @@ right: 0;
 	flex-flow: row wrap;
 	height: 100%;
 }
+.cli_msg
+{
+	font-size: 12px;
+}
 
+.bigevent
+{
+  font-size: 28px;
+}
+
+li
+{
+	font-size:12px;
+	margin-top: 1px;
+}
+.shipname
+{
+	font-size: 16px;
+}
+
+.comm-options span
+{
+	display: inline-block;
+}
 
 .comm-options *, .ship-options *
 {
