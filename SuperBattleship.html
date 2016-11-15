@@ -16,13 +16,13 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href= 'css/reset.css' rel="stylesheet" type="text/css">
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
+  
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   
   <link rel ='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
 <!--   <link rel="stylesheet" type="text/css" href="css/jquery.svg.css">  -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Proza+Libre|Roboto+Slab" rel="stylesheet">
   <link rel ='stylesheet' href ='css/View.css'>
 
   <!-- Favicon
@@ -32,54 +32,32 @@
 
 </head>
 <body>
+  <audio loop ='loop' autoplay="autoplay" controls="controls" hidden = 'hidden'> 
+    <source src ='battleship.mp3'>
+  </audio>
 
 <div id = 'main-content'>
 <div id = 'map' ></div>
     
-    
-  
-<!--  <div id="map_panel">
-  <div id="map_view">
-    <div id="p1_view">P1 View</div>
-    <div id="p2_view">P2 View</div>
-  </div>
-  <div id="view_cntrl">
-    <button type="button" id="p1_view_btn">Player 1 View</button>
-    <button type="button" id="p2_view_btn">Player 2 View</button>
-  </div>
-</div>
-
-<div id="cli_panel">
-  <div id="p1_cli_panel">
-    <div><h3>Player 1</h3></div>
-    <div><input id="p1_cli_input"></div>
-    <div id="p1_cli_output"></div>
-  </div>
-  <div id="p2_cli_panel">
-    <div><h3>Player 2</h3></div>
-    <div><input id="p2_cli_input"></div>
-    <div id="p2_cli_output"></div>
-  </div>
-</div> -->
 <div class = 'cli_input'>
-<h3 id = 'snarky'> HAL 426</h3>
+<h3 id = 'snarky'>Super Battleship</h3>
 <button type="button" class="btn btn-info fleetinfo">Fleet Info</button>
 
 
-<h1>Controls:<h1>
+<h1>Control Panel<h1>
+
 <div class = 'comm-options'>
 
 </div>
 
- <span>1. Click desired command</span><br>
+  <span>1. Toggle desired command</span><br>
   <span>2. Press key for ship to act on:</span><br>
-   <span> --> Submarine: "s"</span><br>
-   <span> --> Destroyer: "d"</span><br>
-   <span> --> Battleship: "b"</span><br>
-   <span> --> Cruiser: "k"</span><br>
-   <span>--> Carrier: "c"</span><br>
-
-
+   <span> --> Submarine: "S"</span><br>
+   <span> --> Destroyer: "D"</span><br>
+   <span> --> Battleship: "B"</span><br>
+   <span> --> Cruiser: "K"</span><br>
+   <span>--> Carrier: "C"</span><br>
+   <span>3. To shoot click a tile</span>
 
 <div class ='fleet-output'></div>
 
@@ -92,20 +70,12 @@
 </div>
 
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="SBConstants.js"></script>
-<script src="SuperBattleship.js"></script>
-<script src='DumbAI.js'></script>
+<script src="SuperBattleship.min.js"></script>
+<script src='cadennlAI.js'></script>
 <script src = 'View.js'></script>
-
-<!-- <script src = 'View.js'></script> -->
 
 </body>
 </html>
